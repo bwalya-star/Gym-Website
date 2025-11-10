@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Gym</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Online Gym</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Trainers</a>
+      <a href="#">Classes</a>
+      <a href="#">News</a>
+      <a href="#">Location</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <div class="content">
+      <section class="card">
+        <h2>Client Details</h2>
+        <form id="client-form">
+          <label>Name</label>
+          <input type="text" required />
+
+          <label>Gender</label>
+          <select>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+
+          <label>Age Group</label>
+          <select>
+            <option>18-25</option>
+            <option>26-35</option>
+            <option>36-50</option>
+            <option>50+</option>
+          </select>
+
+          <label>Health Complications</label>
+          <input type="text" placeholder="If any" />
+
+          <label>Goal</label>
+          <select>
+            <option>Weight Loss</option>
+            <option>Build Muscle</option>
+            <option>Healthy Lifestyle</option>
+          </select>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Gym Packages</h2>
+        <p>3-Month Deal — <strong>K50</strong></p>
+        <button>Subscribe Now</button>
+      </section>
+
+      <section class="card">
+        <h2>Trainer Info</h2>
+        <p>Meet our professional trainers ready to guide you toward your goals.</p>
+      </section>
+
+      <section class="card">
+        <h2>Location</h2>
+        <iframe
+          width="100%"
+          height="200"
+          frameborder="0"
+          src="https://www.google.com/maps?q=lusaka+zambia&output=embed"
+        ></iframe>
+      </section>
+    </div>
+
+    <aside>
+      <section class="card">
+        <h3>Member Portal</h3>
+        <div id="auth-area">
+          <div id="login-form">
+            <label>Email</label>
+            <input id="login-email" type="email" />
+            <label>Password</label>
+            <input id="login-password" type="password" />
+            <button id="login-btn">Login</button>
+            <p id="login-msg" class="muted small"></p>
+          </div>
+
+          <div id="portal" style="display:none">
+            <div class="tabs" id="portal-tabs">
+              <div class="tab active" data-tab="profile">Profile</div>
+              <div class="tab" data-tab="progress">Progress</div>
+              <div class="tab" data-tab="payments">Payments</div>
+              <div class="tab" data-tab="invoices">Invoices</div>
+            </div>
+            <div id="tab-content" class="small"></div>
+            <button id="logout-btn" class="secondary">Logout</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="muted">Demo frontend — uses localStorage only.</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
